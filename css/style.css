@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: #3f4f67;
+    background-color: ghostwhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin-bottom: 40px !important;
+}
+
+/* start nav */
+header{
+    width: 100%;
+    padding: 30px 10px;
+    background-color: #4859bb;
+    background-color: #3f4f67;
+    color: white;
+}
+header div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header h1{
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+}
+header h1 span{
+    font-size: medium;
+    position: absolute;
+    left: 30%;
+}
+h1 a{
+    color: white;
+    text-decoration: none;
+}
+h1 a:hover{
+    color: white;
+}
+.nav-flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-link{
+    padding: 10px 30px !important;
+    border-radius: 15px;
+}
+.link-active{
+    background-color: #4859bb;
+}
+.navbar-nav{
+    margin: 10px 0;
+}
+
+/* start carousel */
+.carousel{
+    margin: 20px auto;
+    width: 90%;  
+    min-width: 320px;
+    height: 650px;
+    position: relative;
+}
+.carousel-inner{
+    border-radius: 12px;
+}
+.carousel-inner img{
+    height: 650px;
+    width: 100%;
+    filter: brightness(50%);
+}
+.carousel-control-next{
+    width: fit-content;
+    position: absolute;
+    right: -30px;
+}
+.carousel-control-prev {
+    width: fit-content;
+    position: absolute;
+    left: -30px;
+}
+.slogan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* start cert */
+.cert{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #4859bb;
+    padding: 30px;
+    border-radius: 12px;
+}
+.cert-right{
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+}
+.form-control{
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+.cert-right div{
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.form-control::placeholder{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+.btn-light{
+    margin-top: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: #4859bb;
+}
+.cert-left{
+    color: white;
+}
+.cert-left p{
+    margin-top: 60px;
+}
+
+/* cards */
+.card img{
+    width: 100px;
+    margin: 20px auto;
+}
+.card-body .btn{
+    background-color: #4859bb;
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+
+/* contact */
+.contact{
+    background-color: #3f4f67;
+    color: white;
+    border-radius: 12px;
+}
+.contact{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.contact .card-body a{
+    text-decoration: none;
+    font-size: large;
+    color: inherit;
+}
+
+.contact .card-body div{
+    padding: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.contact .card-body div::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    left: 1px;
+}
+
+.wp:hover{
+    color: green;
+}
+.wp::before{
+    background-color: green;
+}
+
+.fb:hover{
+    color: blue;
+}
+.fb::before{
+    background-color: blue;
+}
+
+.gmail:hover{
+    color: red;
+}
+.gmail::before{
+    background-color: red;
+}
+
+.c-links{
+    margin-left: 140px !important;
+}
+
+/* footer */
+footer{
+    background-color: #212529;
+    padding: 20px;
+}
+footer *{
+    color: white !important;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+.q-links{
+    display: flex;
+    gap: 50px;
+}
+.q-links ul{
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.foot-left p{
+    margin-left: 25px;
+}
+
+.foot-right{
+    margin-right: 50px;
+}
+.cpy{
+    text-align: center;
+    font-size: small;
+}
