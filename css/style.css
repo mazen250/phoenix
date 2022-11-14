@@ -12,12 +12,19 @@ body{
     margin-bottom: 40px !important;
 }
 
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
 /* start nav */
 header{
     width: 100%;
-    padding: 30px 10px;
-    background-color: #4859bb;
-    background-color: #3f4f67;
+    padding: 20px 10px;
+ 
+    background-color: #073c5a;
     color: white;
 }
 header div{
@@ -31,14 +38,29 @@ header h1{
     padding-bottom: 0;
     position: relative;
 }
+header .slogann{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 80%;
+}
+header .slogann a{
+    text-decoration: none;
+    color: white;
+}
+header .slogann  #bold{
+    font-weight: 600;
+    font-size: larger;
+}
 header h1 span{
     font-size: medium;
     position: absolute;
-    left: 30%;
+    /* left: 30%; */
 }
 h1 a{
     color: white;
     text-decoration: none;
+    font-size: 22px;
 }
 h1 a:hover{
     color: white;
@@ -48,31 +70,34 @@ h1 a:hover{
     justify-content: space-evenly;
 }
 .nav-link{
-    padding: 10px 30px !important;
-    border-radius: 15px;
+    padding: 5px 20px !important;
+    border-radius: 5px;
 }
 .link-active{
-    background-color: #4859bb;
+    background-color: #073c5a;
 }
 .navbar-nav{
     margin: 10px 0;
 }
-
+.navbar{
+    padding: 0;
+}
 /* start carousel */
 .carousel{
     margin: 20px auto;
     width: 90%;  
     min-width: 320px;
-    height: 650px;
+    height: 50% !important;
     position: relative;
 }
 .carousel-inner{
     border-radius: 12px;
 }
 .carousel-inner img{
-    height: 650px;
+    height: 450px;
     width: 100%;
     filter: brightness(50%);
+    object-fit: cover;
 }
 .carousel-control-next{
     width: fit-content;
@@ -102,7 +127,7 @@ h1 a:hover{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    background-color: #4859bb;
+    background-color:#073c5a;
     padding: 30px;
     border-radius: 12px;
 }
@@ -133,13 +158,24 @@ form{
     margin-top: 30px;
     font-weight: bold;
     color: white;
-    background-color: #4859bb;
+    background-color: #073c5a;
 }
 .cert-left{
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10%;
+       
 }
 .cert-left p{
-    margin-top: 60px;
+    width: 70%;
+}
+.cert-left h2{
+    border-bottom: 3px solid white;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 /* cards */
@@ -147,17 +183,21 @@ form{
     width: 100px;
     margin: 20px auto;
 }
-.card-body .btn{
-    background-color: #4859bb;
-}
 .btn a{
     color: white;
     text-decoration: none;
 }
+.card-body .btn{
+    background-color:#073c5a !important;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
 /* contact */
 .contact{
-    background-color: #3f4f67;
+    background-color:#073c5a;
     color: white;
     border-radius: 12px;
 }
@@ -168,8 +208,14 @@ form{
 .contact .card-body a{
     text-decoration: none;
     font-size: large;
-    color: inherit;
+    color: white;
 }
+.contact .card-body p{
+    font-size: large;
+    width: 70%;
+    margin: 0 auto;
+}
+
 
 .contact .card-body div{
     padding: 20px;
@@ -185,24 +231,24 @@ form{
 }
 
 .wp:hover{
-    color: green;
+    color: rgb(190, 201, 190);
 }
 .wp::before{
-    background-color: green;
+    background-color: rgb(195, 202, 195);
 }
 
 .fb:hover{
-    color: blue;
+    color: rgb(185, 181, 181);
 }
 .fb::before{
-    background-color: blue;
+    background-color: rgb(162, 162, 224);
 }
 
 .gmail:hover{
-    color: red;
+    color: rgb(224, 216, 216);
 }
 .gmail::before{
-    background-color: red;
+    background-color: rgb(216, 215, 215);
 }
 
 .c-links{
@@ -218,6 +264,7 @@ footer *{
     color: white !important;
 }
 footer .container{
+    width: 60%;
     display: flex;
     justify-content: space-between;
 }
@@ -229,6 +276,11 @@ footer .container{
     margin-top: 20px;
     list-style: none;
     padding-left: 0;
+}
+.foot-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .foot-left p{
