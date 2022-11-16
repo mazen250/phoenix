@@ -1,0 +1,87 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.outer{
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  height: 100%;
+}
+
+/* side navbar */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar {
+    width: 160px;
+    height: 100%;
+    background: #056ca6;
+    color: #fff;
+}
+@media(max-width:425px){
+    #sidebar {
+        width: max-content;
+    }
+    .outer{
+        gap: 10px;
+    }
+}
+
+@media(min-width:531px){
+    .wrapper{
+        height: 100vh;
+    }
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #073c5a;
+}
+
+#sidebar ul {
+    padding: 20px 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #073c5a;
+    background: #fff;
+    border-radius: 12px;
+}
+/* end side navbar */
+
+.welcome{
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.welcome h1{
+    text-transform: capitalize;
+}
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+    margin: 50px 0;
+}

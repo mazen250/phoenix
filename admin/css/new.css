@@ -1,0 +1,45 @@
+/* login */
+.login100-form-btn {
+    background: #3f4f67;
+}
+
+/* home */
+#sidebar {
+    background: #056ca6;
+}
+#sidebar .sidebar-header {
+    background: #073c5a;
+}
+#sidebar ul li a:hover {
+    color: #073c5a;
+    background: #fff;
+}
+
+/* new buttons */
+.btn{
+    background: #073c5a !important;
+    color: white;
+    border: none;
+}
+.btn:hover{
+    background: #056ca6 !important;
+    color: white !important;
+    border: none;
+}
+
+/* nav */
+.fixed-top{
+    background-color: #073c5a;
+}
+.nav-link:hover {
+    color: #073c5a;
+}
+
+/* pag. */
+.pagination .page-item a {
+    color: #056ca6;
+}
+.page-link.active {
+    color: white !important;
+    background-color: #056ca6;
+}
