@@ -1,0 +1,74 @@
+/* cert.php */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* courses.php */
+.courses {
+  /* margin: 0 auto; */
+  margin-top: 80px;
+  text-align: center;
+}
+.courses p {
+  min-width: 250px;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 40px auto;
+  width: 80%;
+}
+
+.box {
+  height: 150px;
+  width: calc(100% / 3 - 135px);
+  min-width: 200px;
+  background-color: #056ca6;
+  color: white;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.box h3 {
+  margin-top: 20px;
+}
+
+/* pages */
+.pages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.pages a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.pages button {
+  height: 35px;
+  width: 35px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  background-color: #056ca6;
+  margin: 10px 5px;
+}
+.pages .active {
+  background-color: #073c5a;
+}
+
+.page-link:hover {
+  background-color: #056ca6;
+}
