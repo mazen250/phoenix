@@ -1,18 +1,20 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     color: #3f4f67;
-    background-color: ghostwhite;
+    background-color: #fdf8f8;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container{
+
+.container {
     margin-bottom: 40px !important;
 }
 
-.head{
+.head {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,96 +22,126 @@ body{
 }
 
 /* start nav */
-header{
+header {
     width: 100%;
     padding: 20px 10px;
- 
     background-color: #073c5a;
     color: white;
 }
-header div{
+
+header div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-header h1{
+
+header h1 {
     text-align: center;
     margin-bottom: 0;
     padding-bottom: 0;
     position: relative;
 }
-header .slogann{
+
+header .slogann {
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 80%;
 }
-header .slogann a{
+
+header .slogann a {
     text-decoration: none;
     color: white;
 }
-header .slogann  #bold{
+
+header .slogann #bold {
     font-weight: 600;
     font-size: larger;
 }
-header h1 span{
+
+header h1 span {
     font-size: medium;
     position: absolute;
     /* left: 30%; */
 }
-h1 a{
+
+h1 a {
     color: white;
     text-decoration: none;
     font-size: 22px;
 }
-h1 a:hover{
+
+h1 a:hover {
     color: white;
 }
-.nav-flex{
+
+nav {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+nav .container-fluid {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #056ca6 !important;
+    ;
+}
+
+.nav-flex {
     display: flex;
     justify-content: space-evenly;
 }
-.nav-link{
+
+.nav-link {
     padding: 5px 20px !important;
     border-radius: 5px;
 }
-.link-active{
+
+.link-active {
     background-color: #073c5a;
 }
-.navbar-nav{
+
+.navbar-nav {
     margin: 10px 0;
 }
-.navbar{
+
+.navbar {
     padding: 0;
 }
+
 /* start carousel */
-.carousel{
+.carousel {
     margin: 20px auto;
-    width: 90%;  
+    width: 90%;
     min-width: 320px;
     height: 50% !important;
     position: relative;
 }
-.carousel-inner{
+
+.carousel-inner {
     border-radius: 12px;
 }
-.carousel-inner img{
+
+.carousel-inner img {
     height: 450px;
     width: 100%;
     filter: brightness(50%);
     object-fit: cover;
 }
-.carousel-control-next{
+
+.carousel-control-next {
     width: fit-content;
     position: absolute;
     right: -30px;
 }
+
 .carousel-control-prev {
     width: fit-content;
     position: absolute;
     left: -30px;
 }
-.slogan{
+
+.slogan {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -122,73 +154,84 @@ h1 a:hover{
 }
 
 /* start cert */
-.cert{
+.cert {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    background-color:#073c5a;
+    background-color: #073c5a;
     padding: 30px;
     border-radius: 12px;
 }
-.cert-right{
+
+.cert-right {
     width: 400px;
     height: 250px;
     background-color: white;
     border-radius: 20px;
     padding: 30px;
 }
-.form-control{
+
+.form-control {
     width: 250px;
     margin: 0 auto;
     text-align: center;
 }
-.cert-right div{
+
+.cert-right div {
     width: 250px;
     margin: 0 auto;
     margin-bottom: 30px;
 }
-.form-control::placeholder{
+
+.form-control::placeholder {
     text-align: center;
 }
-form{
+
+form {
     text-align: center;
 }
-.btn-light{
+
+.btn-light {
     margin-top: 30px;
     font-weight: bold;
     color: white;
     background-color: #073c5a;
 }
-.cert-left{
+
+.cert-left {
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-left: 10%;
-       
+
 }
-.cert-left p{
+
+.cert-left p {
     width: 70%;
 }
-.cert-left h2{
+
+.cert-left h2 {
     border-bottom: 3px solid white;
     margin-bottom: 20px;
     padding-bottom: 10px;
 }
 
 /* cards */
-.card img{
+.card img {
     width: 100px;
     margin: 20px auto;
 }
-.btn a{
+
+.btn a {
     color: white;
     text-decoration: none;
 }
-.card-body .btn{
-    background-color:#073c5a !important;
+
+.card-body .btn {
+    background-color: #073c5a !important;
     color: white;
     transition: all 0.3s ease-in-out;
 }
@@ -196,33 +239,37 @@ form{
 
 
 /* contact */
-.contact{
-    background-color:#073c5a;
+.contact {
+    background-color: #073c5a;
     color: white;
     border-radius: 12px;
 }
-.contact{
+
+.contact {
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
-.contact .card-body a{
+
+.contact .card-body a {
     text-decoration: none;
     font-size: large;
     color: white;
 }
-.contact .card-body p{
+
+.contact .card-body p {
     font-size: large;
     width: 70%;
     margin: 0 auto;
 }
 
 
-.contact .card-body div{
+.contact .card-body div {
     padding: 20px;
     margin-bottom: 30px;
     position: relative;
 }
-.contact .card-body div::before{
+
+.contact .card-body div::before {
     content: "";
     position: absolute;
     width: 5px;
@@ -230,67 +277,78 @@ form{
     left: 1px;
 }
 
-.wp:hover{
+.wp:hover {
     color: rgb(190, 201, 190);
 }
-.wp::before{
+
+.wp::before {
     background-color: rgb(195, 202, 195);
 }
 
-.fb:hover{
+.fb:hover {
     color: rgb(185, 181, 181);
 }
-.fb::before{
+
+.fb::before {
     background-color: rgb(162, 162, 224);
 }
 
-.gmail:hover{
+.gmail:hover {
     color: rgb(224, 216, 216);
 }
-.gmail::before{
+
+.gmail::before {
     background-color: rgb(216, 215, 215);
 }
 
-.c-links{
+.c-links {
     margin-left: 140px !important;
 }
 
 /* footer */
-footer{
-    background-color: #212529;
+footer.container {
+    background-color: #073c5a;
     padding: 20px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
-footer *{
+
+footer * {
     color: white !important;
 }
-footer .container{
+
+footer .container {
     width: 60%;
     display: flex;
     justify-content: space-between;
 }
-.q-links{
+
+.q-links {
     display: flex;
     gap: 50px;
 }
-.q-links ul{
+
+.q-links ul {
     margin-top: 20px;
     list-style: none;
     padding-left: 0;
 }
-.foot-left{
+
+.foot-left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.foot-left p{
+.foot-left p {
     margin-left: 25px;
 }
 
-.foot-right{
+.foot-right {
     margin-right: 50px;
 }
-.cpy{
+
+.cpy {
     text-align: center;
     font-size: small;
 }
