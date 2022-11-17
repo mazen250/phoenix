@@ -1,51 +1,24 @@
-<?php
-  // fetch programs
-  $myDB= mysqli_connect('localhost', 'root', '', 'am-phoenix');
-  $rows= "SELECT * from courses";
-  $result= mysqli_query($myDB, $rows);
-  $arr= mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-  // courses per page
-  $numArr=count($arr);
-  $numPages=ceil($numArr/12);
-  if(!isset($_GET['ID']) || $_GET['ID']==0){
-    $id=1;
-  }elseif($_GET['ID']> ceil(count($arr)/12)){
-    $id=ceil(count($arr)/12);
-  }else{
-    $id=$_GET['ID'];
-  }
-  $start= ($id-1)*12;
-  $sql= "SELECT * from courses LIMIT $start,12";
-  $res= mysqli_query($myDB, $sql);
-  $thisArr= mysqli_fetch_all($res, MYSQLI_ASSOC);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phoenix Academy</title>
     <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon" />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partners | Phoenix Academy</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -53,12 +26,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="./css/partners.css" />
   </head>
-
   <body>
-    <!-- nav -->
     <header class="container" style="margin-bottom: 0 !important">
       <div class="container head" style="margin-bottom: 0 !important">
         <a href="index.html">
@@ -101,13 +71,15 @@
               <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="aboutus.html">About Us</a>
+              <a class="nav-link active" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active link-active" href="courses.php">Courses</a>
+              <a class="nav-link active" href="courses.php">Courses</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="partners.html">Partners</a>
+              <a class="nav-link active link-active" href="partners.html"
+                >Partners</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="contactus.html">Contact Us</a>
@@ -116,42 +88,41 @@
         </div>
       </div>
     </nav>
-    <div class="courses">
-        <div class="intro-courses">
-            <h2>Our Courses</h2>
-            <p>British Phoenix Academy accredit different courses, and Our certificates are rich your CV to apply in any companies local or international.</p>
-            <p><?php echo($thisArr[0]['name']) ?></p>
-        </div>
-        <div class="programs">
-            <?php
-              foreach($thisArr as $row){
-                echo('
-                <div class="box">
-                    <h3>'.$row['name'].'</h3>
-                </div>');
-              }
-            ?>
-        </div>
-        <div class="pages">
-            <?php
-                if(ceil(count($arr)/12)>1){
-                echo('
-                <button class="page-link"><a href="courses.php?ID='.($id-1).'"><</button>
-                <button class="page-link"><a href="courses.php?ID=1">1</a></button>');
-                    for($i=2; $i<ceil(count($arr)/12); $i++){
-                    echo('<button class="page-link"><a href="courses.php?ID='.$i.'">'.$i.'</a></button>');
-                    }
-                    echo('
-                    <button class="page-link"><a href="courses.php?ID='.($id+1).'">></a></button>');
-                } elseif(ceil(count($arr)/12)==1){
-                echo('<button class="page-link" class="active"><a href="#">1</a></button>');
-            }?>
-        </div>
+
+    <!-- body -->
+    <div class="bodyContainer">
+      <h1>Partners in Success</h1>
+      <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
+        quibusdam, laboriosam delectus nesciunt aut sequi saepe mollitia, ut
+        deleniti ducimus consequuntur perferendis eveniet atque autem vel eaque
+        ipsam. Reiciendis ipsa quae quibusdam reprehenderit amet dolore
+        consectetur perspiciatis obcaecati asperiores? Eaque.
+      </div>
+
+      <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
+        commodi. Fuga at nemo labore velit quos illo deleniti culpa minima error
+        cum, dolores est aliquid, saepe quae nobis ad perspiciatis accusamus.
+        Cumque, doloribus non, ea quo expedita, eveniet libero a deleniti
+        voluptatum suscipit beatae laudantium consequuntur repellendus
+        recusandae aut quos dolorem veritatis. Ad tempora ut illo sequi earum
+        necessitatibus asperiores consequatur reprehenderit unde aliquam quasi
+        aperiam, deserunt quisquam veritatis eum.
+      </div>
+
+      <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus
+        quibusdam, laboriosam delectus nesciunt aut sequi saepe mollitia, ut
+        deleniti ducimus consequuntur perferendis eveniet atque autem vel eaque
+        ipsam. Reiciendis ipsa quae quibusdam reprehenderit amet dolore
+        consectetur perspiciatis obcaecati asperiores? Eaque.
+      </div>
+
+      <img src="../images/british.png" alt="british board" />
     </div>
+    <!-- body end   -->
 
-
-
-    <!-- footer -->
     <div class="pg-footer">
       <footer class="footer">
         <svg
@@ -186,15 +157,15 @@
                   <a href="#">Start</a>
                 </li>
                 <!-- <li
-                  class="menu-item menu-item-type-post_type menu-item-object-product"
-                >
-                  <a href="#">Documentation</a>
-                </li>
-                <li
-                  class="menu-item menu-item-type-post_type menu-item-object-product"
-                >
-                  <a href="#">Installation</a>
-                </li> -->
+                    class="menu-item menu-item-type-post_type menu-item-object-product"
+                  >
+                    <a href="#">Documentation</a>
+                  </li>
+                  <li
+                    class="menu-item menu-item-type-post_type menu-item-object-product"
+                  >
+                    <a href="#">Installation</a>
+                  </li> -->
               </ul>
             </div>
           </div>
@@ -386,17 +357,20 @@
       </footer>
     </div>
 
-    <!-- footer end mazen -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-    <script type="text/javascript">
-        let pages= document.querySelectorAll(".page-link");
-        let page= <?php echo"$id"?>;
-        pages[page].classList.add("active");
-    </script>
-</body>
+  </body>
+</html>
