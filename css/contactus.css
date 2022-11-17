@@ -907,7 +907,7 @@
 
     label {
 		vertical-align: middle;
-		font-family: 'Permanent Marker', cursive;
+		font-family: 'Permanent Marker',Arial, Helvetica, sans-serif;
 		font-size: 1.6em;
 		color: rgba(238, 238, 238, 0.7);
     }
@@ -943,6 +943,8 @@ input[type="submit"] {
     /* background-color: #073c5a;
     border: none;
     padding: 10px; */
+    border-bottom: #00bef0 solid 5px;
+    padding-bottom: 5px;
 }
 
 input[type="submit"]:focus {
@@ -1003,7 +1005,7 @@ input[type="submit"]:focus {
 
     label {
 		vertical-align: middle;
-		font-family: 'Permanent Marker', cursive;
+		font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
 		font-size: 1.6em;
 		color: rgba(238, 238, 238, 0.897);
     }
@@ -1017,7 +1019,7 @@ textarea {
 		padding-left: 10px;
 		background: none;
 		border: none;
-		font-family: 'Permanent Marker', cursive;
+		font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
 		font-size: 14px;
 		color: rgba(238, 238, 238, 0.8);
 		line-height: .6em;
